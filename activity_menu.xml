@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d6efef">
+
+    <TextView
+        android:id="@+id/greetingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+    android:layout_marginStart="16dp"
+    android:textSize="24sp"
+    android:text="Hello, Ali" />
+
+    <TextView
+        android:id="@+id/mentorshipJourneyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/greetingTextView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+    android:textSize="17sp"
+    android:text="Ready for mentorship? Let's begin the journey!"
+    android:textColor="#147076" />
+
+
+
+
+    <!-- Notification Icon to the right of "Hello, Ali" -->
+    <ImageView
+        android:id="@+id/notificationIcon"
+        android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_alignParentEnd="true"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="32dp"
+    android:src="@mipmap/not_round" />
+
+
+    <!-- Top Mentors Section Title -->
+    <TextView
+        android:id="@+id/topMentorsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mentorshipJourneyText"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+    android:text="Top Mentors for you"
+    android:textSize="18sp"
+    android:textStyle="bold"/>
+
+    <!-- Top Mentors RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/topMentorsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_below="@id/topMentorsTitle"
+        android:layout_marginTop="8dp" />
+
+    <!-- Education Mentors Section Title -->
+    <TextView
+        android:id="@+id/educationMentorsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topMentorsRecyclerView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Education Mentors"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <!-- Education Mentors RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/educationMentorsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_below="@id/educationMentorsTitle"
+        android:layout_marginTop="8dp" />
+
+    <!-- Recent Mentors Section Title -->
+    <TextView
+        android:id="@+id/recentMentorsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/educationMentorsRecyclerView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Recent Mentors"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <!-- Recent Mentors RecyclerView -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recentMentorsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recentMentorsTitle"
+        android:layout_margin="8dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <!-- Bottom Navigation View -->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        android:elevation="16dp"
+        app:menu="@drawable/navigation_menu" />
+
+</RelativeLayout>
